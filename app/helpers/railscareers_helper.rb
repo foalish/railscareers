@@ -1,0 +1,2 @@
+module RailscareersHelper
+end

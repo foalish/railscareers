@@ -1,0 +1,29 @@
+<h1>Listing railscareers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @railscareers.each do |railscareer| %>
+      <tr>
+        <td><%= railscareer.name %></td>
+        <td><%= railscareer.content %></td>
+        <td><%= link_to 'Show', railscareer %></td>
+        <td><%= link_to 'Edit', edit_railscareer_path(railscareer) %></td>
+        <td><%= link_to 'Destroy', railscareer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Railscareer', new_railscareer_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @railscareer.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @railscareer.content %>
+</p>
+
+<%= link_to 'Edit', edit_railscareer_path(@railscareer) %> |
+<%= link_to 'Back', railscareers_path %>
