@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -30,6 +30,14 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg', '0.17.1'
+  gem 'unicorn'
+  gem 'rails_log_stdout',                     github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets',            github: 'heroku/rails3_serve_static_assets'
 end
 
 # Use ActiveModel has_secure_password
